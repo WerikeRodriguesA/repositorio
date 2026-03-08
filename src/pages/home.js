@@ -1,10 +1,10 @@
 import { navigate } from '../core/router.js';
 
 export function HomePage() {
-    const container = document.createElement('div');
-    container.className = 'home';
+  const container = document.createElement('div');
+  container.className = 'home';
 
-    container.innerHTML = `
+  container.innerHTML = `
     <div class="home-left">
       <p class="player-tag anim-fade-up" style="animation-delay: 0.1s">// player one</p>
 
@@ -13,7 +13,7 @@ export function HomePage() {
       </h1>
 
       <p class="home-role anim-fade-up" style="animation-delay: 0.5s">
-        Backend Developer · Java · APIs
+        Backend Developer · Java · Spring Boot 
       </p>
 
       <p class="home-lore anim-fade-up" style="animation-delay: 0.7s">
@@ -67,10 +67,10 @@ export function HomePage() {
     </nav>
   `;
 
-    // Navegação pelo menu
-    container.querySelectorAll('[data-route]').forEach((el) => {
-        el.addEventListener('click', () => navigate(el.dataset.route));
-    });
+  // Navegação pelo menu
+  container.querySelectorAll('[data-route]').forEach((el) => {
+    el.addEventListener('click', () => navigate(el.dataset.route));
+  });
 
-    return container;
+  return container;
 }

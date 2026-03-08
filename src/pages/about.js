@@ -1,10 +1,10 @@
 import { navigate } from '../core/router.js';
 
 export function AboutPage() {
-    const container = document.createElement('div');
-    container.className = 'page-wrap';
+  const container = document.createElement('div');
+  container.className = 'page-wrap';
 
-    container.innerHTML = `
+  container.innerHTML = `
     <button class="back-btn">◀ &nbsp;VOLTAR AO MENU</button>
 
     <div class="page-header">
@@ -42,7 +42,10 @@ export function AboutPage() {
         <div class="skill-list">
           <span class="skill-tag">Java</span>
           <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">Spring Security</span>
           <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Clean Code</span>
+          <span class="skill-tag">MySQL</span>
           <span class="skill-tag">SQL</span>
           <span class="skill-tag">HTML5</span>
           <span class="skill-tag">CSS3</span>
@@ -54,7 +57,7 @@ export function AboutPage() {
     </div>
   `;
 
-    container.querySelector('.back-btn').addEventListener('click', () => navigate('home'));
+  container.querySelector('.back-btn').addEventListener('click', () => navigate('home'));
 
-    return container;
+  return container;
 }
