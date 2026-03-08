@@ -1,0 +1,124 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.project-card {
+    border: 1px solid var(--dim);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color var(--transition), background var(--transition);
+    cursor: none;
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    background: rgba(0, 232, 122, 0.03);
+}
+
+.project-card:hover::after {
+    transform: scaleX(1);
+}
+
+.project-card.disabled {
+    opacity: 0.4;
+    border-style: dashed;
+}
+
+.project-card.disabled:hover {
+    border-color: var(--dim);
+    background: none;
+}
+
+.project-card.disabled::after {
+    display: none;
+}
+
+.proj-id {
+    font-size: 0.58rem;
+    color: var(--muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.proj-name {
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 0.7rem;
+}
+
+.proj-desc {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    line-height: 1.8;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+}
+
+.proj-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    gap: 1rem;
+}
+
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.proj-tag {
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    background: rgba(0, 232, 122, 0.07);
+    padding: 0.2rem 0.6rem;
+    text-transform: uppercase;
+}
+
+/* BOTÃO VER CASE */
+.btn-case {
+    font-family: var(--font-hud);
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 0.45rem 1.1rem;
+    cursor: none;
+    transition: background var(--transition), transform 0.15s ease;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-case:hover {
+    background: var(--accent2);
+    transform: translateY(-2px);
+}
+
+.btn-case:disabled {
+    background: var(--muted);
+    color: var(--bg2);
+    pointer-events: none;
+}

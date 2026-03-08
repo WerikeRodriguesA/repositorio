@@ -1,0 +1,53 @@
+export const projects = [
+  {
+    id: 'clinica vida +',
+    num: 'PROJ-001',
+    name: 'Sistema Clínica',
+    desc: 'Sistema de gestão para clínicas com cadastro de pacientes, agendamentos e controle de prontuários.',
+    tags: ['Python', ' Terminal'],
+    case: {
+      overview: 'Sistema desenvolvido para digitalizar e centralizar a gestão de uma clínica, eliminando processos manuais e reduzindo erros operacionais.',
+      problem: 'A clínica controlava agendamentos e prontuários em planilhas e papel, gerando perda de informação e retrabalho constante.',
+      solution: 'Desenvolvi um sistema web com cadastro de pacientes, agenda visual por profissional e histórico de prontuários com busca rápida.',
+      stack: ['Pythont', 'MySQL', 'Terminal'],
+      learned: 'Aprofundei conhecimento em modelagem de banco de dados relacional e no padrão MVC com Spring.',
+    },
+  },
+  {
+    id: 'Agendamentos',
+    num: 'PROJ-002',
+    name: 'Automação de Agendamentos',
+    desc: 'Automação do fluxo de agendamentos reduzindo intervenção manual e aumentando eficiência operacional.',
+    tags: ['Python', 'Automação'],
+    case: {
+      overview: 'Solução para automatizar o processo de criação e confirmação de agendamentos, reduzindo a carga operacional da equipe.',
+      problem: 'O processo de agendamento exigia contato manual para cada etapa, gerando gargalo e atrasos no atendimento.',
+      solution: 'Implementei um fluxo automatizado com envio de confirmações, lembretes e reagendamentos sem intervenção humana.',
+      stack: ['Java', 'Spring Boot', 'Scheduler', 'SQL'],
+      learned: 'Trabalhei com agendamento de tarefas assíncronas e aprendi a pensar em fluxos de processo antes do código.',
+    },
+  },
+  {
+    id: 'api',
+    num: 'PROJ-003',
+    name: 'Backend API REST',
+    desc: 'Sistema backend com API REST estruturada, autenticação e endpoints documentados.',
+    tags: ['Java', 'Spring Boot', 'JWT'],
+    case: {
+      overview: 'API REST completa com autenticação via JWT, controle de acesso por perfil e documentação dos endpoints.',
+      problem: 'Necessidade de uma base backend robusta e segura para servir dados a diferentes clientes (web e mobile).',
+      solution: 'Desenvolvi uma API com autenticação stateless via JWT, filtros de segurança e separação clara de responsabilidades em camadas.',
+      stack: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'PostgreSQL'],
+      learned: 'Entendi na prática como funciona autenticação stateless, filtros HTTP e o fluxo de segurança do Spring Security.',
+    },
+  },
+  {
+    id: 'em-breve',
+    num: 'PROJ-004',
+    name: 'Em Construção',
+    desc: 'Próxima fase em desenvolvimento...',
+    tags: ['???'],
+    disabled: true,
+    case: null,
+  },
+];
