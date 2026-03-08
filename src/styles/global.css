@@ -1,0 +1,131 @@
+html,
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-hud);
+    overflow: hidden;
+    cursor: none;
+}
+
+/* GRID DE FUNDO */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 232, 122, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 232, 122, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* SCANLINES */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(to bottom,
+            transparent,
+            transparent 3px,
+            rgba(0, 0, 0, 0.15) 3px,
+            rgba(0, 0, 0, 0.15) 4px);
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* APP */
+#app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    opacity: 1;
+}
+
+/* CURSOR */
+#cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.15s ease, height 0.15s ease, background 0.15s ease;
+}
+
+#cursor.hover {
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 232, 122, 0.08);
+}
+
+/* HUD CORNERS */
+.hud-corner {
+    position: fixed;
+    font-size: 0.6rem;
+    color: var(--muted);
+    letter-spacing: 2px;
+    z-index: 10;
+    font-family: var(--font-hud);
+}
+
+.hud-tl {
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.hud-tr {
+    top: 1.5rem;
+    right: 1.5rem;
+    text-align: right;
+}
+
+.hud-bl {
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+.hud-br {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    text-align: right;
+}
+
+/* BOTÃO VOLTAR */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    cursor: none;
+    margin-bottom: 2.5rem;
+    transition: color var(--transition);
+}
+
+.back-btn:hover {
+    color: var(--accent);
+}
+
+/* SCROLL INTERNO */
+.page-wrap {
+    width: min(860px, 90vw);
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dim) transparent;
+    padding: 0 1rem;
+}
+
+/* BLINK */
+.blink {
+    animation: blink 1s step-end infinite;
+}
