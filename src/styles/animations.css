@@ -25,27 +25,25 @@
 @keyframes glitch {
     0% {
         text-shadow: 2px 0 var(--danger), -2px 0 var(--accent);
-        clip-path: inset(10% 0 80% 0);
     }
 
     25% {
         text-shadow: -3px 0 var(--accent), 3px 0 var(--danger);
-        clip-path: inset(40% 0 40% 0);
     }
 
     50% {
-        text-shadow: 1px 0 var(--danger), -1px 0 var(--accent);
-        clip-path: inset(70% 0 10% 0);
+        text-shadow: 2px 0 var(--danger), -2px 0 var(--accent);
+        transform: translateX(-2px);
     }
 
     75% {
         text-shadow: -2px 0 var(--accent), 2px 0 var(--danger);
-        clip-path: inset(20% 0 60% 0);
+        transform: translateX(2px);
     }
 
     100% {
         text-shadow: none;
-        clip-path: none;
+        transform: translateX(0);
     }
 }
 

@@ -68,7 +68,7 @@ body::after {
 /* HUD CORNERS */
 .hud-corner {
     position: fixed;
-    font-size: 0.6rem;
+    font-size: 2.0rem;
     color: var(--muted);
     letter-spacing: 2px;
     z-index: 10;

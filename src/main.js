@@ -2,6 +2,7 @@ import './styles/reset.css';
 import './styles/variables.css';
 import './styles/global.css';
 import './styles/animations.css';
+import './styles/home.css';
 
 import { initRouter } from './core/router.js';
 import { initCursor } from './core/cursor.js';
