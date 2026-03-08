@@ -7,6 +7,7 @@ import './styles/about.css';
 import './styles/projects.css';
 import './styles/case.css';
 import './styles/contact.css';
+import './styles/responsive.css';
 
 import { initRouter } from './core/router.js';
 import { initCursor } from './core/cursor.js';

@@ -12,14 +12,28 @@ const routes = {
     case: CasePage,
 };
 
-let currentRoute = 'home';
 const app = document.getElementById('app');
+const loader = document.getElementById('page-loader');
+
+function showLoader() {
+    loader.classList.remove('done');
+    loader.classList.add('loading');
+}
+
+function hideLoader() {
+    loader.classList.add('done');
+    setTimeout(() => {
+        loader.classList.remove('loading', 'done');
+    }, 300);
+}
 
 function render(routeName, params = {}) {
+    showLoader();
     app.style.opacity = '0';
 
     setTimeout(() => {
         app.innerHTML = '';
+
         const PageFn = routes[routeName];
         if (!PageFn) return;
 
@@ -27,8 +41,8 @@ function render(routeName, params = {}) {
         app.appendChild(page);
 
         app.style.opacity = '1';
-        currentRoute = routeName;
-    }, 250);
+        hideLoader();
+    }, 300);
 }
 
 export function navigate(routeName, params = {}) {
@@ -36,6 +50,6 @@ export function navigate(routeName, params = {}) {
 }
 
 export function initRouter() {
-    app.style.transition = 'opacity 0.25s ease';
+    app.style.transition = 'opacity 0.3s ease';
     render('home');
 }

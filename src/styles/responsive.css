@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+
+    /* HOME */
+    .home {
+        flex-direction: column;
+        overflow-y: auto;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    .home-left {
+        padding: 3rem 2rem 2rem;
+        border-right: none;
+        border-bottom: 1px solid var(--dim);
+    }
+
+    .home-right {
+        padding: 2rem;
+        min-width: unset;
+    }
+
+    .home-name {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    /* PÁGINAS INTERNAS */
+    .about-grid,
+    .projects-grid,
+    .case-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-block.full,
+    .case-block.full,
+    .contact-note {
+        grid-column: 1;
+    }
+
+    .page-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    /* HUD */
+    .hud-bl,
+    .hud-br {
+        display: none;
+    }
+}
