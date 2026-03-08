@@ -45,7 +45,7 @@
 
 .home-role {
     margin-top: 1.2rem;
-    font-size: 0.75rem;
+    font-size: 1.0rem;
     color: var(--text-dim);
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -54,7 +54,7 @@
 .home-lore {
     margin-top: 2rem;
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.9;
     color: var(--text-dim);
     max-width: 380px;

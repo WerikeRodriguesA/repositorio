@@ -16,15 +16,15 @@ export function AboutPage() {
 
       <div class="about-block full anim-fade-up" style="animation-delay:0.1s" data-label="// origem">
         <p>
-          Tudo começou com um PlayStation 2. Não foi numa aula, não foi num curso —
-          foi na curiosidade de entender como aquilo funcionava. Desde então, tecnologia
+          Tudo começou com um PlayStation 2 na minha infancia. Não foi numa aula, não foi num curso —
+          foi na curiosidade de entender como aquilo funcionava, pois parecia mágico. Desde então, tecnologia
           deixou de ser entretenimento e virou linguagem. Hoje falo essa linguagem profissionalmente.
         </p>
       </div>
 
       <div class="about-block anim-fade-up" style="animation-delay:0.25s" data-label="// mentalidade">
         <p>
-          Prefiro resolver do que reclamar. Cada bug é um puzzle,
+          Prefiro resolver do que reclamar. Cada bug é um puzzle, que ao ser resolvido, deixa um caminho mais claro para o próximo desafio,
           cada entrega é uma fase zerada. Honestidade e comprometimento
           não são palavras de currículo — são o jeito que eu trabalho.
         </p>
@@ -34,7 +34,7 @@ export function AboutPage() {
         <p>
           Buscar o próximo nível toda semana. Aprender nunca é demais.
           Quero construir sistemas que resolvam problemas reais,
-          com código limpo e arquitetura que dure.
+          com código limpo e arquitetura que dure por anos.
         </p>
       </div>
 

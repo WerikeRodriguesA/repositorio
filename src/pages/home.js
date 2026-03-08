@@ -17,7 +17,7 @@ export function HomePage() {
       </p>
 
       <p class="home-lore anim-fade-up" style="animation-delay: 0.7s">
-        Primeiro contato: PS2, 2003.<br>
+        Primeiro contato com tecnologia: PS2, 2011.<br>
         Desde então: curiosidade virou código,<br>
         código virou solução, solução virou missão.<br>
         Cada problema é uma fase a ser vencida.
