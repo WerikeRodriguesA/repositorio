@@ -28,17 +28,17 @@ export const projects = [
     },
   },
   {
-    id: 'api',
+    id: 'API',
     num: 'PROJ-003',
     name: 'Backend API REST',
-    desc: 'Sistema backend com API REST estruturada, autenticação e endpoints documentados.',
-    tags: ['Java', 'Spring Boot', 'JWT'],
+    desc: 'API REST de autenticação completa com JWT, refresh token rotativo e controle de acesso por roles (USER/ADMIN) e endpoints documentados.',
+    tags: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'PostgreSQL', 'Flyway', 'Docker'],
     case: {
       overview: 'API REST completa com autenticação via JWT, controle de acesso por perfil e documentação dos endpoints.',
       problem: 'Necessidade de uma base backend robusta e segura para servir dados a diferentes clientes (web e mobile).',
-      solution: 'Desenvolvi uma API com autenticação stateless via JWT, filtros de segurança e separação clara de responsabilidades em camadas.',
+      solution: 'Implementei autenticação stateless com access token (15 min) e refresh token (7 dias) com rotação a cada uso. A segurança é gerenciada por um filtro JWT personalizado integrado ao Spring Security, com proteção de rotas por role e tratamento centralizado de exceções.',
       stack: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'PostgreSQL'],
-      learned: 'Entendi na prática como funciona autenticação stateless, filtros HTTP e o fluxo de segurança do Spring Security.',
+      learned: 'Entendi na prática o ciclo completo de autenticação stateless: geração e validação de tokens, revogação via banco, rotação de refresh token e como o Spring Security intercepta requisições antes dos controllers.',
     },
   },
   {
